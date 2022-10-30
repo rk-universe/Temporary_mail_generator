@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>temp mail</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    
+</head>
+<body>
+    <div class="main">
+        <div class="header">
+            <h1>temp<span style="color: #00c497; ">Mail</span></h1>
+        </div>
+        <div class="mailarea">
+            <p class="mailtext">Your temporary mail address</p>
+            <div class="textarea">
+                <h3 id="mail" class="maildemo">  your mail will come here</h3>
+            </div>
+            <div class="bt">
+                
+                <button style="background-color: #00c497; " id="btn"><i class="fa-solid fa-pen-to-square"></i><span class="gntxt" >Generate</span> </button>
+                <button id="btncp"><i class="fa-solid fa-copy"></i><span class="cpytxt">Copy</span></button>
+            </div>
+        </div>
+        <div class="messages" id="inboxBox">
+            <i class="fa-solid fa-envelope"></i>
+            <span><h3 id="inbox">Indox</h3></span>
+            
+        </div>
+
+
+        <!-- <div class="comclass" id="arraw"><p><a href="./single_message.html?id=${data[i].id}"></a> ></p></div>
+         -->
+    </div>
+    <script src="./getmail.js"></script>
+    <script src="./save_mail.js"></script>
+</body>
+</html>

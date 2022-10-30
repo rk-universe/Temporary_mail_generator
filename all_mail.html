@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inbox</title>
+    <style>
+        *{
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+        }
+        .main{
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            background-color: #f6f7f9;
+        }
+        .center{
+            width: 60vw;
+            height: 70vh;
+            position: relative;
+
+            
+        }
+        ul{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            color: aliceblue;
+            font-family: Roboto Mono,monospace!important;
+            
+        }
+        li{
+            margin-top: 20px;  
+            list-style: none; 
+        }
+        li:first-child{
+            margin-left: 20px;
+        }
+        li:last-child{
+            margin-right: 30px;
+        }
+        .header{
+            width: 100%;
+            height: 60px;
+            border-radius: 10px 10px 0 0;
+            background-color: #22242b;
+
+        }
+        .msg{
+            
+            background-color: #f6f7f9;
+            display: flex;
+            justify-content: space-between;
+        }
+        .msg:hover #arrowa{
+            color: #007bff;
+        }
+        .comclass{  
+            margin: 20px;
+            margin-top: 10px;
+        }
+        #subject{
+            margin-right: 151px;
+        }
+        #arraw{
+            margin-right:40px ;
+            font-size: 20px;
+            
+        }
+        
+
+        #arrowa{
+            text-decoration: none;
+            color: #cdcdd8;
+        }
+        .mailcontainer{
+            width: 100%;
+            height: 100%;
+            background-color: #fff
+        }
+        
+       
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="center">
+            <div class="header">
+                <ul>
+                    <li>SENDER</li>
+                    <li>SUBJECT</li>
+                    <li>VIEW</li>
+                </ul>
+            </div>
+            <div class="mailcontainer">
+                <div id="allmails"></div>
+            </div>
+        </div>
+    </div>
+    <script src="./getdata.js"></script>
+</body>
+</html>

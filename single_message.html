@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inbox</title>
+    <style>
+        *{
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+        }
+        .main{
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f6f7f9;
+        }
+        .center{
+            width: 60vw;
+            height: 70vh;
+            
+        }
+        ul{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            color: aliceblue;
+            font-family: Roboto Mono,monospace!important;
+            
+        }
+        li{
+            margin-top: 2%;   
+            list-style: none;
+            
+            transform: translateY(50%);
+            
+        }
+        li:first-child{
+            margin-left: 2%;
+            
+        }
+        
+        .header{
+            width: 100%;
+            height: 60px;
+            border-radius: 10px 10px 0 0;
+            background-color: #22242b;
+
+        }
+        .mailstart{
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+            position: relative;
+            
+        }
+        .maildetail{
+            display: flex;
+            justify-content:space-between;
+            position: relative;
+            margin-bottom: 10px;
+            padding-bottom: 5px;
+            
+        }
+        .maildetail::after{
+            content: "";
+            height: 1px;
+            width: calc(100% - 50px);
+            display: block;
+            background-color: #ebebf4;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            left: 25px;
+        }
+        .common{
+            margin: 2%;
+            
+            
+        }
+        .email{
+            position: absolute;
+            left: 65px;
+            top: 11px;
+        }
+        .circle{
+            width: 45px;
+            height: 45px;
+            border: 2px solid #e5e5f0;
+            border-radius: 50%;
+            display: flex;
+            color: #00c497;;
+            justify-content: center;
+            align-items: center;
+
+        }
+        .date p{
+            display: flex;
+            justify-content: end;
+            font-family: Roboto,sans-serif!important;
+            color: #8c92a5;
+        }
+        .subject{
+            width: 100%;
+            margin-left: 20px;
+            padding-bottom: 10px;
+            position: relative;
+            font-family: Roboto,sans-serif!important;
+            
+           
+        }
+        #subText{
+            color: #8c92a5;
+        }
+        /* .subject::after{
+            content: "";
+            position: absolute;
+            width: 100%;
+            bottom: 0%;
+            left: -20px;
+            border-bottom: 2px solid black;
+        } */
+        .subject::after{
+            content: "";
+            height: 1px;
+            width: 100%;
+            display: block;
+            background-color: #ebebf4;
+            position: absolute;
+            left: -25px;
+            bottom: 0;
+            
+        }
+        .content{
+            margin: 20px;
+            
+        }
+        .subject > p{
+            display: inline;
+        }
+        .mailContent{
+            margin-top: 10px;
+            width: auto;
+            height: 48vh;
+            /* overflow: scroll; */
+            overflow: auto;
+        }
+        
+       
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="center">
+            <div class="header">
+                    <ul>
+                        <li ><a href="./all_mail.html" style="text-decoration: none; color:#fff ">BACK TO LIST</a></li>
+                    </ul> 
+            </div>
+            <div class="mailstart">
+                <div class="maildetail">
+                    <div class="logo common">
+                        <div class="circle">
+                            <h1 id="circleEle"></h1>
+                        </div>
+                    </div>
+                   <div class="email common" id="mailtodisplay"><p></p></div>
+                   <div class="date common">
+                    <p>Date:</p>
+                    <div id="actualdate"></div>
+                   </div>
+                </div>
+               
+                <div class="subject">
+                    <p id="subText"> Subject : </p>
+                    <p id="actualsub"></p>
+                </div>
+                <div class="mailContent">
+
+                    <div class="content" id="maincontent"></div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <script src="./getSingleMail.js"></script>
+</body>
+</html>
